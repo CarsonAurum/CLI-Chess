@@ -3,7 +3,8 @@ package us.carsonrau.models;
 public class Board {
     private final GamePiece[][] board;
 
-    public Board() {
+    public Board(Team[] teams) {
+        assert(teams.length == 2);
         board = new GamePiece[8][8];
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
